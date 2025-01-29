@@ -1,0 +1,43 @@
+@let vm = viewModel();
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon [svgIcon]="vm.icons.menu" />
+  </button>
+  <div class="app-name" routerLink="/" [info]="{ route: 'route' }">
+    {{ 'i18n.core.pageTitle.appName' | translate }}
+  </div>
+  <span class="spacer"></span>
+  <app-language-selection
+    [currentLanguageItem]="vm.currentLanguageItem"
+    [languages]="vm.languageCollection"
+    (selectLanguage)="selectLanguage($event)"
+  />
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [mode]="vm.sidenavMode" [opened]="vm.isOpened" [fixedInViewport]="true" [autoFocus]="false">
+    <div class="sidenav-title" [attr.role]="'none'" (click)="sidenav.toggle()">
+      <mat-icon [svgIcon]="vm.icons.locationCity" />
+      <h3>{{ 'i18n.core.pageTitle.appName' | translate }}</h3>
+    </div>
+
+    <mat-nav-list>
+      @defer (on immediate) {
+        @for (nav of vm.navList; track nav.name) {
+          <app-nav-item
+            [route]="nav.route"
+            [icon]="nav.icon"
+            [name]="nav.name"
+            [hint]="nav.hint"
+            [type]="nav.type"
+            (itemClicked)="onItemClicked($event); sidenav.toggle()"
+          />
+        }
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet />
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,44 @@
+@use "../../../../../styles/mixins/layout";
+@use "../../../../../styles/base/variables" as theme;
+@use "../../../../../styles/base/sizes";
+
+.apartment-preview {
+  max-width: 100%;
+  border: 1px solid theme.$line-color;
+  border-radius: sizes.$small;
+
+  &:hover {
+    cursor: pointer;
+    background-color: theme.$nav-hover-background;
+    box-shadow: 1px 8px 20px theme.$box-shadow-color;
+    -webkit-transition: box-shadow 0.4s ease-in;
+    border: 1px solid theme.$line-hover-color;
+
+    mat-card-title {
+      color: theme.$primary-text-color;
+    }
+
+    mat-card-subtitle {
+      color: initial;
+    }
+  }
+
+  .detail {
+    @include layout.flex(row, space-between);
+  }
+
+  .detail + .detail {
+    margin-top: sizes.$small;
+  }
+
+  .actions {
+    justify-content: space-between;
+  }
+}
+
+img,
+mat-card-title,
+mat-card-subtitle,
+mat-card-content {
+  padding: sizes.$small;
+}

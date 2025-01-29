@@ -1,0 +1,35 @@
+<mat-card class="apartment-preview" [routerLink]="[apartmentOverviewRoute(), apartment().id]">
+  <img mat-card-image [alt]="apartment().title" [src]="apartment().teaserImageUrl" />
+  <mat-card-title>{{ apartment().title | ellipsis }}</mat-card-title>
+  <mat-card-subtitle>
+    @if (apartment().address; as address) {
+      <strong>
+        <span>{{ $apartmentAddress() }}</span
+        ><br />
+        {{ address.borough }}
+      </strong>
+    }
+  </mat-card-subtitle>
+  <mat-card-content>
+    @if (apartment().details; as details) {
+      <div class="detail">
+        <div>{{ details.numberOfRooms }} {{ 'i18n.apartments.content.rooms.text' | translate }}</div>
+        <div>{{ details.size }} {{ 'i18n.apartments.content.sqm.text' | translate }}</div>
+      </div>
+      <div class="detail">
+        <span>{{ details.floor }} {{ 'i18n.apartments.content.floor.text' | translate }}</span>
+        <span> {{ details.rent.totalRent ? $totalPrice() : '' }}</span>
+      </div>
+    }
+  </mat-card-content>
+  <mat-card-actions class="actions">
+    <div>
+      {{ 'i18n.apartments.content.availableFrom.text' | translate }}:
+      {{ apartment().availableFromDate | ngxDate: 'shortDate' }}
+    </div>
+    <mat-icon
+      [color]="isFavourite() ? 'accent' : 'inherit'"
+      [svgIcon]="isFavourite() ? Icon_list().heartCheck : Icon_list().favorite"
+    />
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,8 @@
+{
+  "production": false,
+  "apartmentsApiRoot": "http://localhost:3000/apartments",
+  "statistics": "http://localhost:3000/statistics",
+  "translationsApiRoot": "http://localhost:3000/translations/",
+  "defaultLanguage": "en",
+  "envName": "development"
+}

@@ -1,0 +1,23 @@
+<button
+  mat-fab
+  extended
+  color="primary"
+  aria-label="language"
+  [matMenuTriggerFor]="menu"
+  [matTooltip]="'i18n.core.header.button.changeLanguage.tooltip' | translate"
+>
+  <mat-icon svgIcon="language" />
+  <div data-test-id="current-language">{{ currentLanguageItem().value | translate }}</div>
+</button>
+<mat-menu #menu="matMenu">
+  @for (lang of languages(); track lang.code) {
+    <button
+      [class]="{ active: lang.code === currentLanguageItem().code }"
+      data-test-id="language-menu-item"
+      (click)="selectLanguage.emit(lang)"
+      mat-menu-item
+    >
+      {{ lang.value | translate }}
+    </button>
+  }
+</mat-menu>

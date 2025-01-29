@@ -1,0 +1,6 @@
+@use "../../../../styles/base/variables" as theme;
+
+.active {
+  color: theme.$primary-text-color;
+  background-color: theme.$nav-active-background !important;
+}

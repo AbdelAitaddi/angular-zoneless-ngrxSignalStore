@@ -1,0 +1,8 @@
+dist
+node_modules
+.angular
+.husky
+
+# ignore readme files
+*.md
+

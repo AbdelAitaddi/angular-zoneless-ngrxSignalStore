@@ -1,0 +1,6 @@
+@use "../../../../styles/mixins/layout";
+
+:host {
+  @include layout.flex(column);
+  height: 100%;
+}

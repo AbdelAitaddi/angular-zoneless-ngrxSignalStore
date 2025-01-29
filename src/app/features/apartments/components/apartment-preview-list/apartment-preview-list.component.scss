@@ -1,0 +1,15 @@
+@use "../../../../../styles/base/breakpoints";
+@use "../../../../../styles/base/sizes";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: sizes.$medium;
+}
+
+.allDataLoaded {
+  display: flex;
+  margin: sizes.$medium;
+  justify-content: center;
+  font-weight: bold;
+}

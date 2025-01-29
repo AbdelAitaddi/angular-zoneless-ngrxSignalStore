@@ -1,0 +1,75 @@
+@use "../base/breakpoints";
+@use "../base/sizes";
+@use "../base/variables" as theme;
+
+.mat-sidenav-container {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.mat-nav-list .mat-list-item {
+  font-size: sizes.$medium;
+}
+
+.mat-list-item.active {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.mat-sidenav-content {
+  height: calc(100vh - 64px) !important;
+}
+
+.mat-sidenav {
+  background-color: theme.$background;
+  width: 300px;
+}
+
+mat-sidenav mat-icon {
+  margin-right: sizes.$small-plus;
+}
+
+.mdc-text-field {
+  min-width: sizes.$form-field-max-width;
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-mdc-text-field-wrapper {
+  background-color: theme.$form-field-background !important;
+}
+
+.mat-mdc-option,
+button.mat-mdc-menu-item {
+  margin: sizes.$extra-small 0;
+}
+
+div.mat-mdc-select-panel,
+.mat-mdc-menu-content {
+  padding: 0 !important;
+}
+
+.mat-mdc-menu-content button {
+  justify-content: center !important;
+}
+
+.mat-mdc-menu-panel {
+  width: 126px;
+}
+
+.no-reserved-space {
+  .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
+}
+
+.mat-mdc-dialog-container {
+  margin-top: sizes.$small-plus;
+}
+@media (max-width: map-get(breakpoints.$grid-breakpoints, "sm")) {
+  .mdc-text-field {
+    min-width: sizes.$form-field-min-width;
+  }
+}

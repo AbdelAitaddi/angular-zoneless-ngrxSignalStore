@@ -1,0 +1,17 @@
+@let vm = viewModel();
+@if (vm.apartment; as apartment) {
+  <app-apartment-item
+    class="container"
+    [apartment]="apartment"
+    [selected]="vm.selected"
+    (save)="onSave($event)"
+    (remove)="onRemove($event)"
+    (back)="onBack()"
+  />
+}
+
+@if (vm.isPending) {
+  <div class="loading-indicator">
+    <mat-spinner data-test-id="loading-indicator" mode="indeterminate" />
+  </div>
+}

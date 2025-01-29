@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>{{ 'i18n.apartments.favouritePage.headline.text' | translate }}</h1>
+  @let vm = viewModel();
+  @if (vm) {
+    <app-apartment-preview-list
+      class="apartment-preview"
+      [favouritesIds]="vm.favouritesIds"
+      [apartments]="vm.favoriteApartments"
+    />
+
+    @if (!vm.favoriteApartments.length) {
+      <div class="no-results">
+        {{ 'i18n.apartments.favouritePage.content.NoItemSelected.text' | translate }}
+      </div>
+    }
+  }
+</div>

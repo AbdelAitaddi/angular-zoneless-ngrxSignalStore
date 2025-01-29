@@ -1,0 +1,10 @@
+@use "../../../../../styles/mixins/layout";
+@use "../../../../../styles/base/sizes";
+
+.container {
+  @include layout.flex();
+  width: 100%;
+  height: 100% !important;
+  overflow: auto;
+  padding: sizes.$medium-plus sizes.$large-plus sizes.$medium;
+}

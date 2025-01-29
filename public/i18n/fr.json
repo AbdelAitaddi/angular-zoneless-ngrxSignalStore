@@ -1,0 +1,51 @@
+{
+  "id": "fr",
+  "core.pageName.menuApartment.label": "Appartement",
+  "core.pageName.menuApartment.hint": "trouvez votre prochain appartement",
+  "core.pageName.menuMyFavourites.label": "Mes préférés",
+  "core.pageName.menuMyFavourites.hint": "voir vos favoris",
+  "core.pageName.menuAbout.label": "À propos",
+  "core.pageName.menuAbout.hint": "En savoir plus sur l'application",
+
+  "core.portalTitle.ApartmentSearch": "Mon portail",
+  "core.pageTitle.about": "À propos",
+  "core.pageTitle.appUnavailable": "application indisponible",
+  "core.pageTitle.pageNotFound": "page introuvable",
+  "core.pageTitle.apartments": "Appartements",
+  "core.pageTitle.apartmentDetail": "Appartement",
+  "core.pageTitle.favourites": "Appartements préférés",
+
+  "core.pageTitle.appName": "ApartmentSearch",
+  "core.vocabulary.all": "toute",
+  "core.vocabulary.deutschland": "Allemagne",
+  "core.vocabulary.back": "Retour",
+  "core.vocabulary.english": "Anglaise",
+  "core.vocabulary.german": "Allemand",
+  "core.vocabulary.french": "Français",
+  "core.vocabulary.allDataLoaded.text": "toutes les données sont chargées",
+  "core.vocabulary.in.text": "en",
+  "core.vocabulary.of.text": "de",
+  "core.header.button.changeLanguage.tooltip": "Choisissez votre langue préférée",
+
+  "core.errorMessage.errorRetrievingData": "Une erreur s'est produite lors de la récupération des données de l'application.",
+
+  "apartments.content.deposit.text": "Dépôt",
+  "apartments.content.totalRent.text": "Loyer total",
+  "apartments.content.floor.text": "Étage",
+  "apartments.content.size.text": "Taille",
+  "apartments.content.rooms.text": "Chambres",
+  "apartments.content.address.text": "Adresse",
+  "apartments.content.sqm.text": "m²",
+  "apartments.content.availableFrom.text": "disponible à partir du",
+
+  "apartments.favouritePage.headline.text": "Vos appartements préférés",
+  "apartments.favouritePage.content.NoItemSelected.text": "Aucun élément sélectionné",
+
+  "apartments.listPage.headline.text": "Appartements",
+  "apartments.listPage.content.searchNotMatch.text": "Votre recherche ne correspond à aucun appartement",
+  "apartments.listPage.filter.content.text": "Trouvez votre prochain appartement",
+  "apartments.listPage.form.city.label": "Ville",
+  "apartments.listPage.form.city.hint": "Veuillez sélectionner un arrondissement.",
+  "apartments.listPage.form.borough.label": "Arrondissement",
+  "apartments.listPage.form.borough.hint": "Veuillez sélectionner un arrondissement."
+}

@@ -1,0 +1,29 @@
+@use "../../../../../styles/mixins/layout";
+@use "../../../../../styles/base/sizes";
+
+.container {
+  width: 100%;
+  height: 100% !important;
+  overflow: auto;
+  padding: sizes.$medium-plus sizes.$large-plus sizes.$medium;
+  @include layout.flex(column, initial, initial, initial);
+}
+
+.apartment-preview {
+  @include layout.flex(column, initial, initial, initial);
+}
+
+h1 {
+  align-self: center;
+}
+
+.no-results,
+.loading-error {
+  font-size: sizes.$medium;
+  font-weight: 600;
+  padding: sizes.$small-plus;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}

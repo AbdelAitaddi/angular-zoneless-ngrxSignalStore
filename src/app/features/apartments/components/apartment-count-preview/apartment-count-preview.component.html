@@ -1,0 +1,14 @@
+<div class="apartment-count">
+  @if(showLocation()) {
+    {{ apartmentCount() }}
+    @if(apartmentCount() !== statisticByCity()) {
+      {{'i18n.core.vocabulary.of.text' | translate : { count: statisticByCity() } }}
+    }
+    {{ 'i18n.apartments.listPage.headline.text' | translate }} {{ 'i18n.core.vocabulary.in.text' | translate }}
+    {{ ($selectedCities() ?? ('i18n.core.vocabulary.deutschland' | translate) ) | uppercase }}
+  } @else {
+    @if(apartmentCount()) {
+      {{ apartmentCount() }} {{ 'i18n.apartments.listPage.headline.text' | translate }}
+    }
+  }
+</div>

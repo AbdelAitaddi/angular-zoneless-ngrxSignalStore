@@ -1,0 +1,76 @@
+@use "../../../../../styles/mixins/layout";
+@use "../../../../../styles/base/breakpoints";
+@use "../../../../../styles/base/sizes";
+
+.apartment-detail {
+  width: 60%;
+  margin-top: sizes.$small-plus;
+
+  @include layout.flex();
+
+  mat-card-title,
+  mat-card-content,
+  mat-card-subtitle {
+    padding: sizes.$medium;
+    line-height: 1.5;
+  }
+
+  mat-card-title {
+    margin: 0;
+    font-size: sizes.$medium-plus;
+  }
+
+  mat-card-content {
+    text-align: justify;
+  }
+
+  mat-card-footer {
+    width: 100%;
+    @include layout.flex(row, flex-end);
+    padding: sizes.$small sizes.$medium;
+  }
+
+  mat-card-actions {
+    width: 100%;
+    @include layout.flex(row, space-between);
+    padding: sizes.$medium sizes.$small;
+  }
+
+  .card-title-group {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: sizes.$small;
+  }
+
+  .info {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: sizes.$extra-small;
+    margin-top: sizes.$small-plus;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: map-get(breakpoints.$grid-breakpoints, "xl")) {
+  .apartment-detail {
+    width: 100%;
+  }
+}
+
+@media (max-width: map-get(breakpoints.$grid-breakpoints, "md")) {
+  .apartment-detail {
+    width: 100%;
+
+    .card-title-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: sizes.$small;
+    }
+  }
+}

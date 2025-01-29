@@ -1,0 +1,51 @@
+{
+  "id": "de",
+  "core.pageName.menuApartment.label": "Wohnungen",
+  "core.pageName.menuApartment.hint": "Finden Sie Ihre nächste Wohnung",
+  "core.pageName.menuMyFavourites.label": "Mein Favorit",
+  "core.pageName.menuMyFavourites.hint": "Schauen Sie sich Ihre Favoriten an",
+  "core.pageName.menuAbout.label": "Über App",
+  "core.pageName.menuAbout.hint": "Erfahren Sie mehr über die App",
+
+  "core.portalTitle.ApartmentSearch": "Mein Portal",
+  "core.pageTitle.about": "Über App",
+  "core.pageTitle.appUnavailable": "Die Anwendung nicht verfügbar",
+  "core.pageTitle.pageNotFound": "application indisponible",
+  "core.pageTitle.apartments": "Wohnungen",
+  "core.pageTitle.apartmentDetail": "Wohnung",
+  "core.pageTitle.favourites": "Lieblingswohnungen",
+
+  "core.pageTitle.appName": "ApartmentSearch",
+  "core.vocabulary.all": "alle",
+  "core.vocabulary.deutschland": "Deutschland",
+  "core.vocabulary.back": "Zurück",
+  "core.vocabulary.english": "Englisch",
+  "core.vocabulary.german": "Deutsch",
+  "core.vocabulary.french": "Französisch",
+  "core.vocabulary.allDataLoaded.text": "Alle Daten geladen",
+  "core.vocabulary.in.text": "in",
+  "core.vocabulary.of.text": "von",
+  "core.header.button.changeLanguage.tooltip": "Wählen Sie Ihre bevorzugte Sprache",
+
+  "core.errorMessage.errorRetrievingData": "Beim Abrufen der Anwendungsdaten ist ein Fehler aufgetreten.",
+
+  "apartments.content.deposit.text": "Kaution",
+  "apartments.content.totalRent.text": "Gesamtmiete",
+  "apartments.content.floor.text": "Stock",
+  "apartments.content.size.text": "Größe",
+  "apartments.content.rooms.text": "Zimmer",
+  "apartments.content.address.text": "Adresse",
+  "apartments.content.sqm.text": "m²",
+  "apartments.content.availableFrom.text": "Verfügbar ab",
+
+  "apartments.favouritePage.headline.text": "Ihre Lieblingswohnungen",
+  "apartments.favouritePage.content.NoItemSelected.text": "Keine Elemente ausgewählt sind.",
+
+  "apartments.listPage.headline.text": "Wohnungen",
+  "apartments.listPage.content.searchNotMatch.text": "Für Ihre Suche wurden keine passenden Wohnungen gefunden.",
+  "apartments.listPage.filter.content.text": "Finden Sie Ihre nächste Wohnung.",
+  "apartments.listPage.form.city.label": "Stadt",
+  "apartments.listPage.form.city.hint": "Bitte wählen Sie einen Bezirk aus.",
+  "apartments.listPage.form.borough.label": "Bezirk",
+  "apartments.listPage.form.borough.hint": "Bitte wählen Sie einen Bezirk aus."
+}

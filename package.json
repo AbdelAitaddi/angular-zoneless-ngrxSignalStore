@@ -1,0 +1,81 @@
+{
+  "name": "angular-zoneless-ngrx-signal-store",
+  "description": "Boilerplate project for getting started with ngRx signal store (state management solution) and zoneless, utilizing Angular CLI 19",
+  "version": "1.0.0",
+  "author": "AbdelAitaddi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AbdelAitaddi/angular-zoneless-ngrxSignalStore/issues"
+  },
+  "homepage": "https://github.com/AbdelAitaddi/angular-zoneless-ngrxSignalStore",
+  "keywords": [
+    "angular-19",
+    "ngrx-signal-store",
+    "zoneless",
+    "signals",
+    "standalone",
+    "state-management",
+    "angular-architecture"
+  ],
+  "private": false,
+  "engines": {
+    "node": "^22.13.0",
+    "npm": "^10.9.1"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng dev",
+    "start:eslint": "ng serve --force-esbuild",
+    "db": "json-server --watch db.json --delay 1000",
+    "build": "ng build",
+    "build:watch": "ng build --watch --configuration development",
+    "start-server": "angular-http-server --cors --path ./dist/angular-zoneless-ngrx-signal-store/browser -p 4200",
+    "package-lock-only": "npm install --package-lock-only",
+    "lint": "ng lint",
+    "format:fix": "pretty-quick",
+    "prepare": "husky || true",
+    "test": "ng test"
+  },
+  "dependencies": {
+    "@angular/animations": "~19.2.0",
+    "@angular/cdk": "~19.2.1",
+    "@angular/common": "~19.2.0",
+    "@angular/compiler": "~19.2.0",
+    "@angular/core": "~19.2.0",
+    "@angular/forms": "~19.2.0",
+    "@angular/material": "~19.2.1",
+    "@angular/platform-browser": "~19.2.0",
+    "@angular/platform-browser-dynamic": "~19.2.0",
+    "@angular/router": "~19.2.0",
+    "@colsen1991/ngx-translate-extract-marker": "~3.0.1",
+    "@ngrx/operators": "~19.0.1",
+    "@ngrx/signals": "~19.0.1",
+    "@ngx-translate/core": "~16.0.4",
+    "@ngx-translate/http-loader": "~16.0.1",
+    "@types/node": "~22.13.5",
+    "express": "~4.21.2",
+    "json-server": "~0.17.4",
+    "lodash": "~4.17.21",
+    "ngx-infinite-scroll": "~19.0.0",
+    "normalize.css": "~8.0.1",
+    "rxjs": "~7.8.2",
+    "tslib": "~2.8.1"
+  },
+  "devDependencies": {
+    "@angular-extensions/pretty-html-log": "~5.1.1",
+    "@angular/build": "~19.2.0",
+    "@angular/cli": "~19.2.0",
+    "@angular/compiler-cli": "~19.2.0",
+    "@eslint/js": "~9.21.0",
+    "@types/lodash": "~4.17.15",
+    "angular-eslint": "~19.1.0",
+    "angular-http-server": "~1.12.0",
+    "eslint": "~9.21.0",
+    "husky": "9.1.7",
+    "prettier": "~3.5.2",
+    "pretty-quick": "~4.0.0",
+    "ts-node": "~10.9.2",
+    "typescript": "~5.7.3",
+    "typescript-eslint": "~8.25.0"
+  }
+}
