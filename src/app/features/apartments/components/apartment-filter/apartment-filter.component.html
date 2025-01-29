@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-title>{{ 'i18n.apartments.listPage.filter.content.text' | translate }}</mat-card-title>
+  <mat-card-content>
+    <div class="form-wrapper">
+      <mat-form-field>
+        <mat-label>{{ 'i18n.apartments.listPage.form.city.label' | translate }}</mat-label>
+        <mat-select [ngModel]="city()" (ngModelChange)="onCityChange($event)">
+          <mat-option value="all">{{ 'i18n.core.vocabulary.all' | translate }}</mat-option>
+          @for (city of cities(); track city) {
+          <mat-option [value]="city">{{ city }}</mat-option>
+          }
+        </mat-select>
+        <mat-hint align="start">{{ 'i18n.apartments.listPage.form.city.hint' | translate }}</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>{{ 'i18n.apartments.listPage.form.borough.label' | translate }}</mat-label>
+        <mat-select [ngModel]="borough()" (ngModelChange)="onBoroughChange($event)">
+          <mat-option value="all">{{ 'i18n.core.vocabulary.all' | translate }}</mat-option>
+          @for (borough of boroughs(); track borough) {
+          <mat-option  [value]="borough">{{ borough }}</mat-option>
+          }
+        </mat-select>
+        <mat-hint align="start">{{ 'i18n.apartments.listPage.form.borough.hint' | translate }}</mat-hint>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+</mat-card>

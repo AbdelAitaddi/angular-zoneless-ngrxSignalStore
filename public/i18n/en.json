@@ -1,0 +1,52 @@
+{
+  "id": "en",
+
+  "core.pageName.menuApartment.label": "Apartments",
+  "core.pageName.menuApartment.hint": "find your next flat",
+  "core.pageName.menuMyFavourites.label": "My Favourites",
+  "core.pageName.menuMyFavourites.hint": "view you favourites",
+  "core.pageName.menuAbout.label": "About",
+  "core.pageName.menuAbout.hint": "view app description",
+
+  "core.portalTitle.ApartmentSearch": "My portal",
+  "core.pageTitle.about": "About",
+  "core.pageTitle.appUnavailable": "App unavailable",
+  "core.pageTitle.pageNotFound": "page not found",
+  "core.pageTitle.apartments": "Apartments",
+  "core.pageTitle.apartmentDetail": "Apartment detail",
+  "core.pageTitle.favourites": "Favourites apartment",
+
+  "core.pageTitle.appName": "ApartmentSearch",
+  "core.vocabulary.all": "all",
+  "core.vocabulary.deutschland": "Germany",
+  "core.vocabulary.back": "Back",
+  "core.vocabulary.english": "English",
+  "core.vocabulary.german": "German",
+  "core.vocabulary.french": "French",
+  "core.vocabulary.allDataLoaded.text": "All data loaded",
+  "core.vocabulary.in.text": "in",
+  "core.vocabulary.of.text": "of",
+  "core.header.button.changeLanguage.tooltip": "Choose your preferred language",
+
+  "core.errorMessage.errorRetrievingData": "There was an error retrieving data for the app.",
+
+  "apartments.content.deposit.text": "deposit",
+  "apartments.content.totalRent.text": "sotal rent",
+  "apartments.content.floor.text": "floor",
+  "apartments.content.size.text": "size",
+  "apartments.content.rooms.text": "ooms",
+  "apartments.content.address.text": "ddress",
+  "apartments.content.sqm.text": "sqm",
+  "apartments.content.availableFrom.text": "available from",
+
+  "apartments.favouritePage.headline.text": "Your favourites apartments",
+  "apartments.favouritePage.content.NoItemSelected.text": "No item selected",
+
+  "apartments.listPage.headline.text": "Apartments",
+  "apartments.listPage.content.searchNotMatch.text": "your search did not match any apartments.",
+  "apartments.listPage.filter.content.text": "Find your next apartment",
+  "apartments.listPage.form.city.label": "City",
+  "apartments.listPage.form.city.hint": "Please select a city",
+  "apartments.listPage.form.borough.label": "Borough",
+  "apartments.listPage.form.borough.hint": "Please select a borough."
+}

@@ -1,0 +1,22 @@
+<app-apartment-count-preview
+  [city]="city()"
+  [showLocation]="showLocation()"
+  [apartmentCount]="apartments().length"
+  [statisticByCity]="statisticsByCity()"
+></app-apartment-count-preview>
+
+<div class="container">
+  @defer (when apartments().length > 0) {
+    @for (apartment of apartments(); track apartment.id) {
+      <app-apartment-preview
+        [apartment]="apartment"
+        [isFavourite]="isFavourite(apartment)">
+      </app-apartment-preview>
+    }
+  }
+</div>
+@if(isAllDataLoaded()){
+  <div class="allDataLoaded">
+    {{ 'i18n.core.vocabulary.allDataLoaded.text' | translate }}
+  </div>
+}

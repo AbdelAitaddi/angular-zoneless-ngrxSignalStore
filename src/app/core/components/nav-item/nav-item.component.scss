@@ -1,0 +1,23 @@
+@use "../../../../styles/base/variables" as theme;
+@use "../../../../styles/base/sizes";
+
+a {
+  mat-icon {
+    margin-top: 0 !important;
+    align-self: center !important;
+  }
+}
+
+.icon {
+  align-self: center;
+  margin: 0 sizes.$medium;
+  color: theme.$font-link-color !important;
+}
+
+.hint {
+  color: theme.$hint-link-color;
+}
+
+.active {
+  background-color: theme.$nav-active-background;
+}

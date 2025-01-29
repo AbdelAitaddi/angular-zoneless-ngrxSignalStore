@@ -1,0 +1,16 @@
+@use "../../../../../styles/mixins/layout";
+@use "../../../../../styles/base/sizes";
+
+mat-card-title,
+mat-card-content {
+  @include layout.flex();
+}
+
+mat-card-title {
+  margin: sizes.$small 0 sizes.$small-plus;
+}
+
+.form-wrapper {
+  width: 100%;
+  @include layout.flex(row, space-evenly);
+}

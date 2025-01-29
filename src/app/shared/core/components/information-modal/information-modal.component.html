@@ -1,0 +1,20 @@
+<div class="dialog-title" mat-dialog-title>
+  <div class="content">
+    <mat-icon class="icon" svgIcon="location_city"></mat-icon>
+    <div class="title">About Apartment search portal</div>
+  </div>
+
+  <button mat-icon-button color="close" mat-dialog-close [disableRipple]="true">
+    <mat-icon svgIcon="close"></mat-icon>
+  </button>
+</div>
+
+<mat-dialog-content>
+  <ng-container *ngComponentOutlet="data.component"></ng-container>
+</mat-dialog-content>
+
+<mat-dialog-actions class="dialog-actions" color="primary" align="center">
+  <button mat-fab extended color="primary" [mat-dialog-close]="true" [routerLink]="['./']" cdkFocusInitial>
+    <mat-icon svgIcon="enter"></mat-icon> Explore the App
+  </button>
+</mat-dialog-actions>

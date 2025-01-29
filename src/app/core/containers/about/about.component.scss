@@ -1,0 +1,23 @@
+@use "../../../../styles/base/variables" as theme;
+@use "../../../../styles/base/sizes";
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: sizes.$small-plus;
+  padding: sizes.$medium-plus;
+
+  .card-header {
+    background-color: black;
+    color: white;
+    padding: sizes.$medium;
+  }
+
+  .card-content {
+    p {
+      text-align: justify;
+    }
+    line-height: sizes.$medium-plus;
+  }
+}

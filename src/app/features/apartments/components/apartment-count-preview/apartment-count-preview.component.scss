@@ -1,0 +1,16 @@
+@use "../../../../../styles/base/variables" as theme;
+@use "../../../../../styles/base/breakpoints";
+@use "../../../../../styles/base/sizes";
+
+.apartment-count {
+  font-weight: 600;
+  margin: sizes.$large-plus 0 sizes.$large;
+  font-size: sizes.$medium-plus;
+  color: theme.$primary-text-color;
+}
+
+@media (max-width: map-get(breakpoints.$grid-breakpoints, "sm")) {
+  .apartment-count {
+    font-size: sizes.$medium;
+  }
+}

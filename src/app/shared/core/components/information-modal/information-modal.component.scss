@@ -1,0 +1,55 @@
+@use "../../../../../styles/base/variables" as theme;
+@use "../../../../../styles/base/breakpoints";
+@use "../../../../../styles/base/sizes";
+
+.dialog-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
+  border-bottom: 1px solid theme.$dialog-line-color;
+  background-color: theme.$primary-text-color;
+  color: white;
+  width: 100%;
+
+  .content {
+    display: flex;
+    flex: 1 1 100%;
+    width: 100%;
+    margin: sizes.$medium-plus 0;
+  }
+
+  .icon {
+    align-self: center;
+  }
+
+  .title {
+    font-size: sizes.$large-font-size;
+    font-weight: bold;
+    margin-left: sizes.$small;
+  }
+}
+
+.dialog-actions {
+  border-top: 1px solid theme.$dialog-line-color;
+  padding: sizes.$medium;
+}
+
+.mat-close {
+  color: theme.$white-color;
+  &:hover {
+    color: theme.$hint-link-color;
+    background-color: theme.$nav-hover-background;
+  }
+}
+
+@media (max-width: map-get(breakpoints.$grid-breakpoints, "md")) {
+  .dialog-title {
+    .icon {
+      flex: 1 0;
+    }
+    .title {
+      font-size: sizes.$medium;
+      flex: 1 1 100%;
+    }
+  }
+}

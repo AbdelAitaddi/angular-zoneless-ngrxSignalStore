@@ -1,0 +1,25 @@
+@if(type() === 'navigation'){
+<a
+  mat-list-item
+  (click)="navigate($event) "
+  [routerLink]="route()"
+  [routerLinkActive]="'active'"
+  [routerLinkActiveOptions]="{ exact: true }"
+  data-test-id="nav-item-link"
+>
+  <mat-icon matListItemIcon class="icon" [svgIcon]="icon()"></mat-icon>
+  <span mat-line matListItemTitle data-test-id="nav-item-name">{{ name() | translate }}</span>
+  <span mat-line matListItemLine class="hint" data-test-id="nav-item-hint">{{ hint() | translate }}</span>
+</a>
+} @else {
+  <a
+    mat-list-item
+    (click)="navigate($event)"
+    [attr.role]="'none'"
+    data-test-id="popup-item-link"
+  >
+    <mat-icon matListItemIcon class="icon" [svgIcon]="icon()"></mat-icon>
+    <span mat-line matListItemTitle data-test-id="nav-item-name">{{ name() | translate }}</span>
+    <span mat-line matListItemLine class="hint" data-test-id="nav-item-hint">{{ hint() | translate }}</span>
+  </a>
+}

@@ -1,0 +1,52 @@
+<mat-card class="apartment-detail">
+  <mat-card-header>
+    <mat-card-title-group class="card-title-group">
+      <img mat-card-xl-image [src]="apartment().teaserImageUrl" alt="{{ apartment().title }}" />
+      <mat-card-title>
+        {{ apartment().title }}
+        <mat-icon color="accent" [class.hide]="!selected()" [svgIcon]="Icon_list().heartCheck"></mat-icon>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <div class="info">
+          <div>
+            <strong>{{ 'i18n.apartments.content.address.text' | translate }}: </strong> {{ $apartmentAddress() }} - ({{
+              apartment().address.borough
+            }})
+          </div>
+          <div>
+            <strong>{{ 'i18n.apartments.content.rooms.text' | translate }}: </strong>
+            <span>{{ apartment().details.numberOfRooms }}</span>
+          </div>
+          <div>
+            <strong> {{ 'i18n.apartments.content.size.text' | translate }}: </strong>
+            <span> {{ apartment().details.size || '--' }} {{ 'i18n.apartments.content.sqm.text' | translate }}</span>
+          </div>
+          <div>
+            <strong>{{ 'i18n.apartments.content.floor.text' | translate }}:</strong>
+            <span>{{ apartment().details.floor || '--' }}</span>
+          </div>
+          <div>
+            <strong>{{ 'i18n.apartments.content.totalRent.text' | translate }}: </strong>
+            <span> {{ apartment().details.rent.totalRent ? $totalPrice() : '' }}</span>
+          </div>
+        </div>
+      </mat-card-subtitle>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>{{ apartment().description }}</mat-card-content>
+  @if (apartment().details.rent; as rent) {
+    <mat-card-footer>
+      {{ 'i18n.apartments.content.deposit.text' | translate }}: {{ rent.deposit }},
+      <cite title="internalId"> {{ $rentDetailInfo() }}</cite>
+    </mat-card-footer>
+  }
+  <mat-card-actions>
+    <button mat-fab extended color="primary" (click)="back.emit()">
+      <mat-icon [svgIcon]="Icon_list().back"></mat-icon>{{ 'i18n.core.vocabulary.back' | translate }}
+    </button>
+    <button mat-fab extended color="{{ selected() ? 'warn' : 'accent' }}" (click)="toggleFavourite(apartment())">
+      <mat-icon [svgIcon]="selected() ? Icon_list().heartMinus : Icon_list().heartPlus"></mat-icon
+      >{{ selected() ? 'unlike' : 'like' }}
+    </button>
+  </mat-card-actions>
+</mat-card>

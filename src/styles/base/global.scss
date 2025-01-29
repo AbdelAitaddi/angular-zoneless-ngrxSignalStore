@@ -1,0 +1,35 @@
+@use "../mixins/layout";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  word-wrap: break-word;
+}
+
+* {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: none;
+  overflow: auto;
+}
+
+.hide {
+  visibility: hidden !important;
+}
+
+.loading-indicator {
+  @include layout.flex();
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background: rgba(250, 250, 250, 0.1);
+}
