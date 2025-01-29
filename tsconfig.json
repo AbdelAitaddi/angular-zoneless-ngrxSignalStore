@@ -28,7 +28,7 @@
     "lib": ["ES2022", "dom", "esnext.asynciterable"]
   },
   "angularCompilerOptions": {
-    "strictStandalone": false,
+    "strictStandalone": true,
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,

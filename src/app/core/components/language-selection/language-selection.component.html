@@ -12,7 +12,7 @@
 <mat-menu #menu="matMenu">
   @for (lang of languages(); track lang.code) {
     <button
-      [ngClass]="{ active: lang.code === currentLanguageItem().code }"
+      [class]="{ active: lang.code === currentLanguageItem().code }"
       data-test-id="language-menu-item"
       (click)="selectLanguage.emit(lang)"
       mat-menu-item
